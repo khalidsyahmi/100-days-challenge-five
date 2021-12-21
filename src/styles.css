@@ -1,0 +1,115 @@
+/* Universal styles to inherit into child */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: rgb(170, 255, 255);
+}
+
+/* Target the tags directly. specificity */
+h1 {
+  font-size: 2rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+form {
+  width: 40rem;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 3px 3px 6px gray;
+  border-radius: 4px;
+}
+
+/* body form {
+  display: block;
+}
+
+ */
+section {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  color: rgb(0, 0, 0);
+  display: block;
+  font-weight: 300;
+  font-size: 2rem;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  font-style: inherit;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  display: block;
+  border-radius: 4px;
+  width: 70%;
+  box-sizing: border-box; /* actual width respects padding */
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: rgb(158, 255, 255);
+  border: 2px solid rgb(43, 255, 237);
+}
+
+button {
+  font: inherit;
+  border: 1px solid seagreen;
+  padding: 0.4rem 2rem;
+  border-radius: 5px;
+  cursor: crosshair;
+}
+
+button:hover {
+  border: 2px solid seagreen;
+  background-color: greenyellow;
+  font-weight: bold;
+  color: azure;
+}
+
+#button-action {
+  text-align: right;
+  margin-right: 3rem;
+}
+
+.btn-empty {
+  background-color: antiquewhite;
+}
+
+.btn-filled {
+  background-color: blue;
+  color: white;
+}
+
+/* class always at bottom */
+/* to set radio button to inline (one line)  */
+.inline-control {
+  display: flex;
+}
+
+.inline-control label {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+/* because 70% witdh is inherited */
+/* i cant vertically align the input to labels */
+.inline-control input {
+  width: auto;
+  /*   position: relative;
+  vertical-align: middle; */
+}

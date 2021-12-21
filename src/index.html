@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day 29 Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>Perfect Form</h1>
+    </header>
+    <main>
+      <!-- no server yet -->
+      <form action="index.html" method="GET">
+        <section>
+          <h2>How do you do ?</h2>
+          <ul>
+            <li>
+              <label for="yourname">What is your name ?</label>
+              <input type="text" name="your-name" id="yourname" required />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </li>
+            <li>
+              <label for="Phone">Phone Number</label>
+              <input
+                type="number"
+                name="hp"
+                id="Phone"
+                required
+                minlength="12"
+              />
+            </li>
+            <li>
+              <label for="usercomplaint">State your complaint</label>
+              <textarea
+                name="user-complaint"
+                id="usercomplaint"
+                cols="30"
+                rows="10"
+                required
+                minlength="10"
+                maxlength="200"
+              ></textarea>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="preferrence">What is your body type preferrence ?</label>
+          <select name="body-preferrences" id="preferrence" required>
+            <ul>
+              <option value="B">B</option>
+              <option value="T">T</option>
+              <option value="A">A</option>
+              <option value="M">M</option>
+            </ul>
+          </select>
+        </section>
+        <!--name=same, id = unique, for=id > in label-->
+        <!-- in lists -->
+        <section>
+          <h2>How should we reply ?</h2>
+          <ul>
+            <li class="inline-control">
+              <input
+                type="radio"
+                name="help"
+                id="mom"
+                value="1"
+                checked="checked"
+                required
+              />
+              <label for="mom"> Radio Box </label>
+            </li>
+            <li class="inline-control">
+              <input type="radio" name="help" id="sis" value="2" required />
+              <label for="sis"> Radio Box </label>
+            </li>
+            <li class="inline-control">
+              <input type="radio" name="help" id="aunt" value="3" required />
+              <label for="aunt"> Radio Box </label>
+            </li>
+            <li class="inline-control">
+              <input type="radio" name="help" id="friend" value="4" required />
+
+              <label for="friend"> Radio Box </label>
+            </li>
+          </ul>
+        </section>
+        <!-- in section -->
+        <section class="inline-control">
+          <input
+            type="checkbox"
+            name="accept-terms"
+            id="accecptnterms"
+            required
+          />
+          <label for="accecptnterms">Accept Terms</label>
+        </section>
+        <section id="button-action">
+          <button type="reset" class="btn-empty">reset</button>
+          <button type="submit" class="btn-filled">submit</button>
+        </section>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
